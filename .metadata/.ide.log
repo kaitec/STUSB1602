@@ -1,0 +1,11 @@
+2021-12-05 18:08:22,572 [INFO] Activator:178 - 
+
+
+2021-12-05 18:08:22,572 [INFO] Activator:179 - !SESSION log4j initialized
+2021-12-05 18:09:32,946 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option fr.ac6.managedbuild.option.gnu.cross.prefix.565767633 uses a null category that is invalid in its context. The option was ignored.
+2021-12-05 18:09:32,979 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option fr.ac6.managedbuild.option.gnu.cross.mcu.979563651 uses a null category that is invalid in its context. The option was ignored.
+2021-12-05 18:09:32,979 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option fr.ac6.managedbuild.option.gnu.cross.board.744161805 uses a null category that is invalid in its context. The option was ignored.
+2021-12-05 18:09:32,995 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option fr.ac6.managedbuild.option.gnu.cross.instructionSet.1003770173 uses a null category that is invalid in its context. The option was ignored.
+2021-12-05 18:09:32,995 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option fr.ac6.managedbuild.option.gnu.cross.fpu.1758543436 uses a null category that is invalid in its context. The option was ignored.
+2021-12-05 18:09:32,995 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option fr.ac6.managedbuild.option.gnu.cross.floatabi.96554642 uses a null category that is invalid in its context. The option was ignored.
+2021-12-05 18:10:25,214 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
