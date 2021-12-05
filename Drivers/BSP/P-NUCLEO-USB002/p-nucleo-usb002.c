@@ -97,14 +97,15 @@ TCPC_DrvTypeDef* DevicesDrivers[USBPD_PORT_COUNT] = {
 USBPD_BSP_GPIOPins_TypeDef USBPD_BSP_LEDs[USBPD_BSP_LEDn] =
     {
       USBPD_BSP_PIN(GPIOA,5),           /* LED1: generic */
+
+      USBPD_BSP_PIN(GPIOC,10),          /* LED_RGB Blue  */
+      USBPD_BSP_PIN(GPIOC,11),          /* LED_RGB Green */
+      USBPD_BSP_PIN(GPIOC,12)           /* LED_RGB Red   */
       
-      USBPD_BSP_PIN(GPIOC,5),           /* LED01: PORT0_ROLE */
-      USBPD_BSP_PIN(GPIOB,1),           /* LED02: PORT0_VBUS */
-      USBPD_BSP_PIN(GPIOB,2),           /* LED03: PORT0_CCx  */
-      
-      USBPD_BSP_PIN(GPIOC,14),          /* LED11: PORT1_ROLE */
-      USBPD_BSP_PIN(GPIOA,6),           /* LED12: PORT1_VBUS */
-      USBPD_BSP_PIN(GPIOC,15)           /* LED13: PORT1_CCx  */
+//      USBPD_BSP_PIN(GPIOC,5),           /* LED01: PORT0_ROLE */
+//      USBPD_BSP_PIN(GPIOB,1),           /* LED02: PORT0_VBUS */
+//      USBPD_BSP_PIN(GPIOB,2),           /* LED03: PORT0_CCx  */
+
     } ;
 
 
