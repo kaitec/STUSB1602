@@ -62,7 +62,7 @@
   */
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
-#define USBPD_POWSELn    ((USBPD_PORT_COUNT) * 2)
+#define USBPD_POWSELn    4//((USBPD_PORT_COUNT) * 2)
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 extern uint32_t ADCxConvertedValues[];
@@ -72,8 +72,13 @@ extern uint32_t ADCxConvertedValues[];
   */
 static const USBPD_BSP_GPIOPins_TypeDef USBPD_POWSELs[USBPD_POWSELn] =
 {
-  USBPD_BSP_PIN(GPIOB,7),
-  USBPD_BSP_PIN(GPIOB,6),
+	USBPD_BSP_PIN(GPIOA,11), // PDO 1
+	USBPD_BSP_PIN(GPIOA,10), // PDO 2
+	USBPD_BSP_PIN(GPIOA, 9), // PDO 3
+	USBPD_BSP_PIN(GPIOA, 8), // PDO 4
+
+//  USBPD_BSP_PIN(GPIOB,7),
+//  USBPD_BSP_PIN(GPIOB,6),
 #if USBPD_PORT_COUNT == 2
   USBPD_BSP_PIN(GPIOC,1),
   USBPD_BSP_PIN(GPIOC,9),
@@ -122,37 +127,67 @@ USBPD_StatusTypeDef HW_IF_PWR_SetVoltage(uint8_t PortNum, uint16_t voltage)
 {
  USBPD_StatusTypeDef ret = USBPD_OK;
 #if _PPS==USBPD_FALSE
-  /* configuration for STCH2 Board, enabled only profile 5V and 9V
-   * Connections
-   * +----------------+-------------------------------------------+
-   * |   J4 STCH2     |     C4 MB1303/MB1257                      |
-   * +----+-----------+----+--------------------------------------+
-   * |PIN#| PIN Name  |PIN#|PIN Name                              |
-   * +----+-----------+----+--------------------------------------+
-   * | 1  | Vout      |1-3 |POWCNN1 (VBus)                        |
-   * | 2  | SEL1      |9   |POWCNN9 / CN7.21 (PB7)    (open drain)|
-   * | 3  | SEL2      |11  |POWCNN11 / CN10.17 (PB6)  (open drain)|
-   * | 4  | GND       |5-7 |GND                                   |
-   * +----+-----------+----+--------------------------------------+
-   *
-   * STCH2 Voltage Output
-   * +------+------+------+
-   * | SEL2 | SEL1 | VOUT |
-   * +------+------+------+
-   * |  0   |  0   |  5V  |
-   * |  0   |  1   |  9V  |
-   * |  1   |  -   | 12V  |
-   * +------+------+------+
+
+  /* PCB Voltage Output
+   * +------+------+------+------+------+
+   * | PA11 | PA10 | PA 9 | PA 8 |      |
+   * | PDO1 | PDO2 | PDO3 | PDO4 | VOUT |
+   * +------+------+------+------+------+
+   * |  0   |  0   |  0   |  0   |  5V  |
+   * |  0   |  0   |  0   |  1   |  9V  |
+   * |  0   |  0   |  1   |  0   | 12V  |
+   * |  0   |  1   |  0   |  0   | 15V  |
+   * |  1   |  0   |  0   |  0   | 20V  |
+   * +------+------+------+------+------+
    */
 
-  uint32_t offset_port = (PortNum == 0) ? 0 : 2;
+ switch (voltage)
+ {
+   case 5000:
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
+       break;
+   case 9000:
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  1);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
+       break;
+   case 12000:
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  1);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
+       break;
+   case 15000:
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 1);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
+       break;
+   case 20000:
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 1);
+       break;
+   default:
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
+       break;
+ }
 
+//uint32_t offset_port = (PortNum == 0) ? 0 : 2;
 
-#ifdef CONF_NORMAL
-  /* force low both sel pins */
-  USBPD_HW_IF_GPIO_Off(USBPD_POWSELs[offset_port]);
-  USBPD_HW_IF_GPIO_Off(USBPD_POWSELs[offset_port+1]);
-#endif
+//#ifdef CONF_NORMAL
+//  /* force low both sel pins */
+//  USBPD_HW_IF_GPIO_Off(USBPD_POWSELs[offset_port]);
+//  USBPD_HW_IF_GPIO_Off(USBPD_POWSELs[offset_port+1]);
+//#endif
 
 #ifdef CONF_DEMO
   /* force low both sel pins */
