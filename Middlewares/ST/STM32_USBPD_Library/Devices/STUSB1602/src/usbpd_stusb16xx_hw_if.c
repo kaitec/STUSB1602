@@ -2168,12 +2168,12 @@ USBPD_StatusTypeDef STUSB16xx_HW_IF_Alert_Manager(uint8_t PortNum)
     USBPD_BSP_LED_Off(LED_PORT0_CC);
     USBPD_BSP_LED_Off(LED_PORT0_VBUS);
     USBPD_BSP_LED_Off(LED_PORT0_ROLE);
-    USBPD_BSP_LED_Off(LED_PORT1_CC);
-    USBPD_BSP_LED_Off(LED_PORT1_VBUS);
-    USBPD_BSP_LED_Off(LED_PORT1_ROLE);
+//    USBPD_BSP_LED_Off(LED_PORT1_CC);
+//    USBPD_BSP_LED_Off(LED_PORT1_VBUS);
+//    USBPD_BSP_LED_Off(LED_PORT1_ROLE);
     while(1)
     {
-      USBPD_BSP_LED_Toggle(PortNum == 0 ? LED_PORT0_CC : LED_PORT1_CC);
+      USBPD_BSP_LED_Toggle(PortNum == 0 ? LED_PORT0_CC : LED_PORT0_CC);
       for(i=0; i<400000; i++) __NOP();
     }
 

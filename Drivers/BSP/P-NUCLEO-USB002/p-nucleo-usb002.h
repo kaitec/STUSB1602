@@ -110,12 +110,12 @@ typedef struct
     ELED2 = 2,       /**<LED02 (green); D101 of MB1303 X-NUCLEO */
     ELED3 = 3,       /**<LED03 (red);   D102 of MB1303 X-NUCLEO */
     
-    ELED4 = 4,       /**<LED11 (blue);  D103 of MB1303 X-NUCLEO */
-    ELED5 = 5,       /**<LED12 (green); D104 of MB1303 X-NUCLEO */
-    ELED6 = 6,       /**<LED13 (red);   D105 of MB1303 X-NUCLEO */
+//    ELED4 = 4,       /**<LED11 (blue);  D103 of MB1303 X-NUCLEO */
+//    ELED5 = 5,       /**<LED12 (green); D104 of MB1303 X-NUCLEO */
+//    ELED6 = 6,       /**<LED13 (red);   D105 of MB1303 X-NUCLEO */
 
     /* BSP name list */
-    GREEN_USER_LED      = ELED0,
+    GREEN_USER_LED      = ELED1,//0,
 
     LED_PORT0_CC        = ELED3,
     LED_PORT0_VBUS      = ELED2,
@@ -125,12 +125,12 @@ typedef struct
        PORT0 Role is remapped on original PORT1 Role => ELED4 */
     LED_PORT0_ROLE      = ELED4,
 #else
-    LED_PORT0_ROLE      = ELED1,
+    LED_PORT0_ROLE      = ELED0,//1,
 #endif  /* __AUTHENTICATION__ */
 
-    LED_PORT1_CC        = ELED6,
-    LED_PORT1_VBUS      = ELED5,
-    LED_PORT1_ROLE      = ELED4
+//    LED_PORT1_CC        = ELED6,
+//    LED_PORT1_VBUS      = ELED5,
+//    LED_PORT1_ROLE      = ELED4
   } USBPD_BSP_Led_TypeDef;
 
 /**
@@ -149,7 +149,7 @@ typedef struct
 #define USBPD_BSP_USART_IRQHandler              USART1_IRQHandler
 #endif /* USBPD_CLI */
 
-#define USBPD_BSP_LEDn                          7
+#define USBPD_BSP_LEDn                          4//7
 #define USBPD_BSP_LED_LEN                       USBPD_BSP_LEDn
 
 #if defined(USBPD_STUSB1605)

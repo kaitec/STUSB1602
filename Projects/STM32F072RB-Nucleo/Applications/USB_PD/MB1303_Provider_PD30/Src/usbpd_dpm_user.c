@@ -146,7 +146,7 @@ USBPD_StatusTypeDef USBPD_DPM_UserInit(void)
   Led_Set(LED_PORT0_ROLE,
           ((DPM_Settings[USBPD_PORT_0].PE_DefaultRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC),
           0);
-  Led_Set(LED_PORT1_ROLE, LED_MODE_OFF, 0);
+  Led_Set(LED_PORT0_ROLE, LED_MODE_OFF, 0);
 
   /* PWR SET UP */
   USBPD_PWR_IF_Init();
@@ -249,9 +249,9 @@ void USBPD_DPM_UserCableDetection(uint8_t PortNum, USBPD_CAD_EVENT State)
     }
 
     /* Led feedback */
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT1_CC) , (DPM_Params[PortNum].ActiveCCIs == CC1 ? LED_MODE_BLINK_CC1 : LED_MODE_BLINK_CC2), 0);
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT1_VBUS) , LED_MODE_BLINK_VBUS, 0);
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT1_ROLE) , ((DPM_Params[PortNum].PE_PowerRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC), 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT0_CC) , (DPM_Params[PortNum].ActiveCCIs == CC1 ? LED_MODE_BLINK_CC1 : LED_MODE_BLINK_CC2), 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT0_VBUS) , LED_MODE_BLINK_VBUS, 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT0_ROLE) , ((DPM_Params[PortNum].PE_PowerRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC), 0);
     DPM_Ports[PortNum].DPM_IsConnected = 1;
     break;
 
@@ -271,17 +271,17 @@ void USBPD_DPM_UserCableDetection(uint8_t PortNum, USBPD_CAD_EVENT State)
     }
 
     /* Led feedback */
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT1_CC) , (DPM_Params[PortNum].ActiveCCIs == CC1 ? LED_MODE_BLINK_CC1 : LED_MODE_BLINK_CC2), 0);
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT1_VBUS) , LED_MODE_BLINK_VBUS, 0);
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT1_ROLE) , ((DPM_Params[PortNum].PE_PowerRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC), 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT0_CC) , (DPM_Params[PortNum].ActiveCCIs == CC1 ? LED_MODE_BLINK_CC1 : LED_MODE_BLINK_CC2), 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT0_VBUS) , LED_MODE_BLINK_VBUS, 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT0_ROLE) , ((DPM_Params[PortNum].PE_PowerRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC), 0);
     DPM_Ports[PortNum].DPM_IsConnected = 1;
     break;
 
   case USBPD_CAD_EVENT_LEGACY:
     /* Led feedback */
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT1_CC) , (DPM_Params[PortNum].ActiveCCIs == CC1 ? LED_MODE_BLINK_CC1 : LED_MODE_BLINK_CC2), 0);
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT1_VBUS) , LED_MODE_BLINK_VBUS, 0);
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT1_ROLE) , ((DPM_Params[PortNum].PE_PowerRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC), 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT0_CC) , (DPM_Params[PortNum].ActiveCCIs == CC1 ? LED_MODE_BLINK_CC1 : LED_MODE_BLINK_CC2), 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT0_VBUS) , LED_MODE_BLINK_VBUS, 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT0_ROLE) , ((DPM_Params[PortNum].PE_PowerRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC), 0);
     break;
   case USBPD_CAD_EVENT_DETACHED :
   case USBPD_CAD_EVENT_EMC :
@@ -298,10 +298,10 @@ void USBPD_DPM_UserCableDetection(uint8_t PortNum, USBPD_CAD_EVENT State)
     }
 
     /* Led feedback */
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT1_CC) , LED_MODE_OFF, 0);
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT1_VBUS) , LED_MODE_OFF, 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_CC : LED_PORT0_CC) , LED_MODE_OFF, 0);
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT0_VBUS) , LED_MODE_OFF, 0);
     /* Set the power role */
-    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT1_ROLE),
+    Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT0_ROLE),
             ((DPM_Settings[PortNum].PE_DefaultRole == USBPD_PORTPOWERROLE_SNK) ? LED_MODE_BLINK_ROLE_SNK : LED_MODE_BLINK_ROLE_SRC),
             0);
     break;
@@ -423,7 +423,7 @@ void USBPD_DPM_Notification(uint8_t PortNum, USBPD_NotifyEventValue_TypeDef Even
     case USBPD_NOTIFY_POWER_EXPLICIT_CONTRACT :
       /* Power ready means an explicit contract has been establish and Power is available */
       /* Turn On VBUS LED when an explicit contract is established */
-      Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT1_VBUS) , LED_MODE_ON, 0);
+      Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT0_VBUS) , LED_MODE_ON, 0);
       break;
     /*
                               End Power Notification
@@ -1080,7 +1080,7 @@ static USBPD_StatusTypeDef DPM_TurnOffPower(uint8_t PortNum, USBPD_PortPowerRole
   USBPD_StatusTypeDef status = USBPD_OK;
 
   status = USBPD_PWR_IF_VBUSDisable(PortNum);
-  Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT1_VBUS) , LED_MODE_OFF, 0);
+  Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT0_VBUS) , LED_MODE_OFF, 0);
   return status;
 }
 
@@ -1108,7 +1108,7 @@ static USBPD_StatusTypeDef DPM_TurnOnPower(uint8_t PortNum, USBPD_PortPowerRole_
   }
 
   /* Led feedback */
-  Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT1_VBUS) , LED_MODE_BLINK_VBUS, 0);
+  Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_VBUS : LED_PORT0_VBUS) , LED_MODE_BLINK_VBUS, 0);
 
   return status;
 }
@@ -1122,7 +1122,7 @@ static void DPM_AssertRp(uint8_t PortNum)
 {
   USBPD_CAD_AssertRp(PortNum);
 
-  Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT1_ROLE) , LED_MODE_BLINK_ROLE_SRC, 0);
+  Led_Set((PortNum == USBPD_PORT_0 ? LED_PORT0_ROLE : LED_PORT0_ROLE) , LED_MODE_BLINK_ROLE_SRC, 0);
 }
 
 
