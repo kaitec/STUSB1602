@@ -75,20 +75,20 @@ typedef struct
 }USBPD_PWR_Port_PDO_Storage_TypeDef;
 
 /* Exported define -----------------------------------------------------------*/
-#define USBPD_PDP_SRC_IN_WATTS          15  /* SRC PD Power in Watts */
+#define USBPD_PDP_SRC_IN_WATTS          60 // 15  /* SRC PD Power in Watts */
 
 /* Define board operating power and max power */
 /* Request 5V */
 #define USBPD_BOARD_REQUESTED_VOLTAGE_MV       5000
 #define USBPD_BOARD_MIN_VOLTAGE_MV             5000
-#define USBPD_BOARD_MAX_VOLTAGE_MV             5000
+#define USBPD_BOARD_MAX_VOLTAGE_MV            20000 // 5000
 
 /* Max current */
 /* 3000mA in source mode */
 #define USBPD_CORE_PDO_SRC_FIXED_MAX_CURRENT   3000
 
 /* Definitions of nb of PDO and APDO for each port */
-#define PORT0_NB_SOURCEPDO         1   /* Number of Source PDOs (applicable for port 0)   */
+#define PORT0_NB_SOURCEPDO         5//1   /* Number of Source PDOs (applicable for port 0)   */
 
 
 /* Exported constants --------------------------------------------------------*/

@@ -570,3 +570,1676 @@ arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
   51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
 Finished building: default.size.stdout
  
+22:24:50 **** Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m0 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f072rbtx.d" -MT"Startup/startup_stm32f072rbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f072rbtx.o" "../Startup/startup_stm32f072rbtx.s"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_hal_msp.d" -MT"Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_it.d" -MT"Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-size   PD_FW.elf 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7672	     20	   1820	   9512	   2528	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.list
+ 
+Finished building: PD_FW.bin
+ 
+22:24:55 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+22:31:08 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_hal_msp.d" -MT"Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_it.d" -MT"Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7684	     20	   1820	   9524	   2534	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+22:31:12 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+22:37:32 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+22:37:34 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+22:47:10 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+22:47:12 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+22:37:52 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:98:1: error: unknown type name 'uint16_t'
+ uint16_t INA226_get_data(uint8_t reg);
+ ^~~~~~~~
+../Inc/INA226.h:98:26: error: unknown type name 'uint8_t'
+ uint16_t INA226_get_data(uint8_t reg);
+                          ^~~~~~~
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Inc/stm32f0xx_hal_conf.h:189,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:2:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:200:0: warning: "READ_BIT" redefined
+ #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+ 
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:38:0: note: this is the location of the previous definition
+ #define READ_BIT                    0x01    /*!< I2C master read */
+ 
+make: *** [Src/subdir.mk:45: Src/INA226.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:37:54 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+22:38:30 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Inc/stm32f0xx_hal_conf.h:189,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:2:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:200:0: warning: "READ_BIT" redefined
+ #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+ 
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:38:0: note: this is the location of the previous definition
+ #define READ_BIT                    0x01    /*!< I2C master read */
+ 
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.list
+ 
+Finished building: PD_FW.bin
+ 
+22:38:31 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+23:07:12 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Inc/stm32f0xx_hal_conf.h:189,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:2:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:200:0: warning: "READ_BIT" redefined
+ #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+ 
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:38:0: note: this is the location of the previous definition
+ #define READ_BIT                    0x01    /*!< I2C master read */
+ 
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+23:07:13 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+23:21:30 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Inc/stm32f0xx_hal_conf.h:189,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:2:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:200:0: warning: "READ_BIT" redefined
+ #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+ 
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:37:0: note: this is the location of the previous definition
+ #define READ_BIT                    0x01    /*!< I2C master read */
+ 
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:11:17: error: 'INA226_CONFIG' undeclared (first use in this function); did you mean 'INA226_REG_CONFIG'?
+  SentTable[0] = INA226_CONFIG;
+                 ^~~~~~~~~~~~~
+                 INA226_REG_CONFIG
+../Src/INA226.c:11:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:45: Src/INA226.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:21:31 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+23:22:02 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Inc/stm32f0xx_hal_conf.h:189,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:2:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:200:0: warning: "READ_BIT" redefined
+ #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+ 
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:37:0: note: this is the location of the previous definition
+ #define READ_BIT                    0x01    /*!< I2C master read */
+ 
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+23:22:03 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+23:24:00 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+23:24:01 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+23:40:41 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+23:40:43 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+23:57:19 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:99:1: error: unknown type name 'uint16_t'
+ uint16_t INA226_get_data(uint8_t reg);
+ ^~~~~~~~
+../Inc/INA226.h:99:26: error: unknown type name 'uint8_t'
+ uint16_t INA226_get_data(uint8_t reg);
+                          ^~~~~~~
+../Src/INA226.c: In function 'INA226_get_data':
+../Src/INA226.c:38:54: warning: passing argument 3 of 'HAL_I2C_Master_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   HAL_I2C_Master_Transmit(&hi2c1, INA226_ADDRESS<<1, reg, 1, INA226_I2CTIMEOUT);
+                                                      ^~~
+In file included from ../Inc/stm32f0xx_hal_conf.h:237:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:2:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:622:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t {aka unsigned char}'
+ HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:45: Src/INA226.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:57:20 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:03:14 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:99:1: error: unknown type name 'uint16_t'
+ uint16_t INA226_get_data(uint8_t reg);
+ ^~~~~~~~
+../Inc/INA226.h:99:26: error: unknown type name 'uint8_t'
+ uint16_t INA226_get_data(uint8_t reg);
+                          ^~~~~~~
+../Src/INA226.c: In function 'INA226_get_data':
+../Src/INA226.c:36:21: error: invalid initializer
+   uint8_t regbuf[1]=reg;
+                     ^~~
+make: *** [Src/subdir.mk:45: Src/INA226.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:03:15 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:03:49 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:99:1: error: unknown type name 'uint16_t'
+ uint16_t INA226_get_data(uint8_t reg);
+ ^~~~~~~~
+../Inc/INA226.h:99:26: error: unknown type name 'uint8_t'
+ uint16_t INA226_get_data(uint8_t reg);
+                          ^~~~~~~
+make: *** [Src/subdir.mk:45: Src/INA226.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:03:50 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:05:04 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+In file included from ../Src/INA226.c:1:0:
+../Inc/INA226.h:99:1: error: unknown type name 'uint16_t'
+ uint16_t INA226_get_data(uint8_t reg);
+ ^~~~~~~~
+../Inc/INA226.h:99:26: error: unknown type name 'uint8_t'
+ uint16_t INA226_get_data(uint8_t reg);
+                          ^~~~~~~
+make: *** [Src/subdir.mk:45: Src/INA226.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:05:05 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:10:09 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+00:10:10 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:19:19 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7700	     20	   1820	   9540	   2544	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+00:19:21 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:21:17 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14736	     20	   1832	  16588	   40cc	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+00:21:18 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:25:59 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current;
+             ^~~~~~~
+../Src/main.c:71:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage;
+             ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16176	     20	   1832	  18028	   466c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+00:26:01 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:46:57 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current;
+             ^~~~~~~
+../Src/main.c:71:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage;
+             ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16772	     20	   1832	  18624	   48c0	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+00:46:59 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:47:18 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current;
+             ^~~~~~~
+../Src/main.c:71:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage;
+             ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16772	     20	   1832	  18624	   48c0	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+00:47:20 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+00:48:49 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current;
+             ^~~~~~~
+../Src/main.c:71:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage;
+             ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16788	     20	   1832	  18640	   48d0	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+00:48:50 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+10:38:11 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current;
+             ^~~~~~~
+../Src/main.c:71:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage;
+             ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+10:38:15 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+10:43:12 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+10:43:13 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+10:43:39 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+10:43:51 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+10:44:49 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+10:45:09 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+10:46:21 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+10:48:01 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:03:11 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_hal_msp.d" -MT"Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_it.d" -MT"Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+../Src/main.c: In function 'main':
+../Src/main.c:97:3: warning: implicit declaration of function 'INA226_init' [-Wimplicit-function-declaration]
+   INA226_init();
+   ^~~~~~~~~~~
+../Src/main.c:98:3: warning: implicit declaration of function 'INA226_calibrate' [-Wimplicit-function-declaration]
+   INA226_calibrate();
+   ^~~~~~~~~~~~~~~~
+../Src/main.c:109:12: warning: implicit declaration of function 'INA226_get_voltage'; did you mean 'set_voltage'? [-Wimplicit-function-declaration]
+    voltage=INA226_get_voltage();
+            ^~~~~~~~~~~~~~~~~~
+            set_voltage
+../Src/main.c:110:12: warning: implicit declaration of function 'INA226_get_current' [-Wimplicit-function-declaration]
+    current=INA226_get_current();
+            ^~~~~~~~~~~~~~~~~~
+../Src/main.c:70:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current;
+             ^~~~~~~
+../Src/main.c:69:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage;
+             ^~~~~~~
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16688	     20	   1832	  18540	   486c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+11:03:16 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+11:03:25 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16688	     20	   1832	  18540	   486c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:05:07 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_hal_msp.d" -MT"Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f0xx_it.d" -MT"Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f0xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+../Src/main.c: In function 'main':
+../Src/main.c:97:3: warning: implicit declaration of function 'INA226_init' [-Wimplicit-function-declaration]
+   INA226_init();
+   ^~~~~~~~~~~
+../Src/main.c:98:3: warning: implicit declaration of function 'INA226_calibrate' [-Wimplicit-function-declaration]
+   INA226_calibrate();
+   ^~~~~~~~~~~~~~~~
+../Src/main.c:109:12: warning: implicit declaration of function 'INA226_get_voltage'; did you mean 'set_voltage'? [-Wimplicit-function-declaration]
+    voltage=INA226_get_voltage();
+            ^~~~~~~~~~~~~~~~~~
+            set_voltage
+../Src/main.c:110:12: warning: implicit declaration of function 'INA226_get_current' [-Wimplicit-function-declaration]
+    current=INA226_get_current();
+            ^~~~~~~~~~~~~~~~~~
+../Src/main.c:70:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current;
+             ^~~~~~~
+../Src/main.c:69:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage;
+             ^~~~~~~
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+11:05:11 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+11:05:15 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:05:45 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:08:49 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:10:43 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:12:06 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:13:24 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:16:47 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:17:13 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1832	  18556	   487c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:18:11 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:97:3: warning: implicit declaration of function 'INA226_init' [-Wimplicit-function-declaration]
+   INA226_init();
+   ^~~~~~~~~~~
+../Src/main.c:98:3: warning: implicit declaration of function 'INA226_calibrate' [-Wimplicit-function-declaration]
+   INA226_calibrate();
+   ^~~~~~~~~~~~~~~~
+../Src/main.c:109:12: warning: implicit declaration of function 'INA226_get_voltage'; did you mean 'set_voltage'? [-Wimplicit-function-declaration]
+    voltage=INA226_get_voltage();
+            ^~~~~~~~~~~~~~~~~~
+            set_voltage
+../Src/main.c:110:12: warning: implicit declaration of function 'INA226_get_current' [-Wimplicit-function-declaration]
+    current=INA226_get_current();
+            ^~~~~~~~~~~~~~~~~~
+../Src/main.c:70:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current=0;
+             ^~~~~~~
+../Src/main.c:69:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage=0;
+             ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+11:18:13 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+11:18:17 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:26:18 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+11:27:18 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+12:17:19 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+12:18:27 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:97:3: warning: implicit declaration of function 'INA226_init' [-Wimplicit-function-declaration]
+   INA226_init();
+   ^~~~~~~~~~~
+../Src/main.c:98:3: warning: implicit declaration of function 'INA226_calibrate' [-Wimplicit-function-declaration]
+   INA226_calibrate();
+   ^~~~~~~~~~~~~~~~
+../Src/main.c:109:12: warning: implicit declaration of function 'INA226_get_voltage'; did you mean 'set_voltage'? [-Wimplicit-function-declaration]
+    voltage=INA226_get_voltage();
+            ^~~~~~~~~~~~~~~~~~
+            set_voltage
+../Src/main.c:110:12: warning: implicit declaration of function 'INA226_get_current' [-Wimplicit-function-declaration]
+    current=INA226_get_current();
+            ^~~~~~~~~~~~~~~~~~
+../Src/main.c:70:13: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+      double current=0;
+             ^~~~~~~
+../Src/main.c:69:13: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+      double voltage=0;
+             ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16728	     20	   1832	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+12:18:29 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+12:18:42 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16728	     20	   1832	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+12:20:00 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16728	     20	   1832	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+14:01:01 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:21:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:3:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+14:01:03 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+14:05:49 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:21:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:3:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+14:05:50 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+14:06:02 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+14:06:03 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+14:06:05 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+14:06:23 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16720	     20	   1832	  18572	   488c	PD_FW.elf
+Finished building: default.size.stdout
+ 
+14:09:43 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:21:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:3:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16712	     20	   1832	  18564	   4884	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+14:09:44 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+14:09:55 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16712	     20	   1832	  18564	   4884	PD_FW.elf
+Finished building: default.size.stdout
+ 
+14:11:19 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:21:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:3:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16712	     20	   1832	  18564	   4884	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+14:11:21 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+14:11:30 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16712	     20	   1832	  18564	   4884	PD_FW.elf
+Finished building: default.size.stdout
+ 
+14:48:52 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:22:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:3:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16732	     20	   1832	  18584	   4898	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+14:48:54 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+14:48:57 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16732	     20	   1832	  18584	   4898	PD_FW.elf
+Finished building: default.size.stdout
+ 
+14:57:59 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:15:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Inc/i2c.h:27,
+                 from ../Src/INA226.c:3:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16732	     20	   1832	  18584	   4898	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+14:58:01 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+15:07:07 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1856	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+15:07:08 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+15:07:12 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1856	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+15:08:00 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1856	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+15:08:01 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+15:08:02 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1856	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+15:09:44 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16704	     20	   1856	  18580	   4894	PD_FW.elf
+Finished building: default.size.stdout
+ 
+15:11:16 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:71:12: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+     double current=0;
+            ^~~~~~~
+../Src/main.c:70:12: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+     double voltage=0;
+            ^~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16716	     20	   1832	  18568	   4888	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+15:11:18 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+15:11:20 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16716	     20	   1832	  18568	   4888	PD_FW.elf
+Finished building: default.size.stdout
+ 
+15:12:22 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16716	     20	   1832	  18568	   4888	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:04:41 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:16:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Src/INA226.c:1:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16716	     20	   1832	  18568	   4888	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+17:04:43 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+17:04:56 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16716	     20	   1832	  18568	   4888	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:08:34 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:16:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Src/INA226.c:1:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+17:08:35 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+17:08:42 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:16:28 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/INA226.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/INA226.d" -MT"Src/INA226.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/INA226.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F072xB -DDEBUG -c -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:71:12: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+     double current=0;
+            ^~~~~~~
+../Src/main.c:70:12: warning: variable 'voltage' set but not used [-Wunused-but-set-variable]
+     double voltage=0;
+            ^~~~~~~
+../Src/INA226.c: In function 'INA226_init':
+../Src/INA226.c:16:58: warning: passing argument 3 of 'HAL_I2C_Master_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+     HAL_I2C_Master_Receive (&hi2c1, (INA226_ADDRESS<<1), &data, 2, INA226_I2CTIMEOUT);
+                                                          ^
+In file included from ../Inc/stm32f0xx_hal_conf.h:240:0,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Src/INA226.c:1:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:624:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PD_FW.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\Andrew\Documents\KiCad\PD_FW\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PD_FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PD_FW.elf
+ 
+arm-none-eabi-objdump -h -S  PD_FW.elf  > "PD_FW.list"
+arm-none-eabi-objcopy  -O binary  PD_FW.elf  "PD_FW.bin"
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+Finished building: PD_FW.bin
+ 
+Finished building: PD_FW.list
+ 
+17:16:29 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51048	    688	   8776	  60512	   ec60	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+17:16:34 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:31:46 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:31:47 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Middlewares/ST/STM32_USBPD_Library/Core/src/usbpd_dpm_core.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.d" -MT"Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.o"
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_dpm_user.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Application/User/usbpd_dpm_user.d" -MT"Application/User/usbpd_dpm_user.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/usbpd_dpm_user.o"
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_pwr_if.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Application/User/usbpd_pwr_if.d" -MT"Application/User/usbpd_pwr_if.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/usbpd_pwr_if.o"
+arm-none-eabi-gcc -o "STM32F072RB-Nucleo_MB1303_Provider_PD30.elf" @"objects.list"  -l:USBPDCORE_PD3_CONFIG_1_CM0_wc32.a -mcpu=cortex-m0 -T"../STM32F072RBTx_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F072RB-Nucleo_MB1303_Provider_PD30.map" -Wl,--gc-sections -static -L../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/lib --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  > "STM32F072RB-Nucleo_MB1303_Provider_PD30.list"
+Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.list
+ 
+arm-none-eabi-objcopy  -O binary  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  "STM32F072RB-Nucleo_MB1303_Provider_PD30.bin"
+Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.bin
+ 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51336	    688	   8776	  60800	   ed80	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+17:37:28 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:37:29 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Middlewares/ST/STM32_USBPD_Library/Core/src/usbpd_dpm_core.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.d" -MT"Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.o"
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_dpm_user.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Application/User/usbpd_dpm_user.d" -MT"Application/User/usbpd_dpm_user.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/usbpd_dpm_user.o"
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_pwr_if.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Application/User/usbpd_pwr_if.d" -MT"Application/User/usbpd_pwr_if.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/usbpd_pwr_if.o"
+arm-none-eabi-gcc -o "STM32F072RB-Nucleo_MB1303_Provider_PD30.elf" @"objects.list"  -l:USBPDCORE_PD3_CONFIG_1_CM0_wc32.a -mcpu=cortex-m0 -T"../STM32F072RBTx_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F072RB-Nucleo_MB1303_Provider_PD30.map" -Wl,--gc-sections -static -L../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/lib --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Application/User/usbpd_pwr_if.o: In function `USBPD_PWR_IF_Init':
+C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_pwr_if.c:139: undefined reference to `PORT0_PDO_ListSRC'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:60: STM32F072RB-Nucleo_MB1303_Provider_PD30.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:38:16 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:38:16 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_pwr_if.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Application/User/usbpd_pwr_if.d" -MT"Application/User/usbpd_pwr_if.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/usbpd_pwr_if.o"
+arm-none-eabi-gcc -o "STM32F072RB-Nucleo_MB1303_Provider_PD30.elf" @"objects.list"  -l:USBPDCORE_PD3_CONFIG_1_CM0_wc32.a -mcpu=cortex-m0 -T"../STM32F072RBTx_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F072RB-Nucleo_MB1303_Provider_PD30.map" -Wl,--gc-sections -static -L../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/lib --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  > "STM32F072RB-Nucleo_MB1303_Provider_PD30.list"
+Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.list
+ 
+arm-none-eabi-objcopy  -O binary  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  "STM32F072RB-Nucleo_MB1303_Provider_PD30.bin"
+Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.bin
+ 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51336	    688	   8776	  60800	   ed80	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
+17:52:02 **** Incremental Build of configuration Debug for project PD_FW ****
+make -j8 all 
+arm-none-eabi-size   PD_FW.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16792	     20	   1832	  18644	   48d4	PD_FW.elf
+Finished building: default.size.stdout
+ 
+17:52:02 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+make all 
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Middlewares/ST/STM32_USBPD_Library/Core/src/usbpd_dpm_core.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.d" -MT"Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/ST/STM32_USBPD_Library/Core/usbpd_dpm_core.o"
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_dpm_user.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Application/User/usbpd_dpm_user.d" -MT"Application/User/usbpd_dpm_user.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/usbpd_dpm_user.o"
+arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Projects/STM32F072RB-Nucleo/Applications/USB_PD/MB1303_Provider_PD30/Src/usbpd_pwr_if.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Application/User/usbpd_pwr_if.d" -MT"Application/User/usbpd_pwr_if.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/usbpd_pwr_if.o"
+arm-none-eabi-gcc -o "STM32F072RB-Nucleo_MB1303_Provider_PD30.elf" @"objects.list"  -l:USBPDCORE_PD3_CONFIG_1_CM0_wc32.a -mcpu=cortex-m0 -T"../STM32F072RBTx_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F072RB-Nucleo_MB1303_Provider_PD30.map" -Wl,--gc-sections -static -L../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/lib --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  > "STM32F072RB-Nucleo_MB1303_Provider_PD30.list"
+Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.list
+ 
+arm-none-eabi-objcopy  -O binary  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  "STM32F072RB-Nucleo_MB1303_Provider_PD30.bin"
+Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.bin
+ 
+arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51336	    688	   8776	  60800	   ed80	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+Finished building: default.size.stdout
+ 
