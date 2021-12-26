@@ -115,7 +115,7 @@ typedef struct
 //    ELED6 = 6,       /**<LED13 (red);   D105 of MB1303 X-NUCLEO */
 
     /* BSP name list */
-    GREEN_USER_LED      = ELED1,//0,
+    GREEN_USER_LED      = ELED0,
 
     LED_PORT0_CC        = ELED3,
     LED_PORT0_VBUS      = ELED2,
@@ -125,7 +125,7 @@ typedef struct
        PORT0 Role is remapped on original PORT1 Role => ELED4 */
     LED_PORT0_ROLE      = ELED4,
 #else
-    LED_PORT0_ROLE      = ELED0,//1,
+    LED_PORT0_ROLE      = ELED1,
 #endif  /* __AUTHENTICATION__ */
 
 //    LED_PORT1_CC        = ELED6,

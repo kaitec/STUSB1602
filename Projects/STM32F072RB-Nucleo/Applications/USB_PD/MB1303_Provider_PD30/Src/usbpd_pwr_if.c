@@ -124,6 +124,31 @@ uint32_t _PWR_SNKBatteryPDO(float _MAXV_,float _MINV_,float _PWR_);
 #elif defined(__ICCARM__)
 #pragma optimize=none
 #endif
+
+/* Definition of Source PDO for Port 0 */
+
+//PORT0_PDO_ListSRC[USBPD_MAX_NB_PDO] =
+//{
+//  /* PDO 1 */
+//        ( ((PWR_A_10MA(USBPD_CORE_PDO_SRC_FIXED_MAX_CURRENT/1000.0)) << USBPD_PDO_SRC_FIXED_MAX_CURRENT_Pos) |
+//          ((PWR_V_50MV(5)) << USBPD_PDO_SRC_FIXED_VOLTAGE_Pos)                                        |
+//          USBPD_PDO_SRC_FIXED_PEAKCURRENT_EQUAL                                                       |
+//          USBPD_PDO_SRC_FIXED_UNCHUNK_NOT_SUPPORTED                                                   |
+//          USBPD_PDO_SRC_FIXED_DRD_NOT_SUPPORTED                                                       |
+//          USBPD_PDO_SRC_FIXED_USBCOMM_NOT_SUPPORTED                                                   |
+//          USBPD_PDO_SRC_FIXED_EXT_POWER_AVAILABLE                                                     |
+//          USBPD_PDO_SRC_FIXED_USBSUSPEND_NOT_SUPPORTED                                                |
+//          USBPD_PDO_SRC_FIXED_DRP_NOT_SUPPORTED                                                       |
+//          USBPD_PDO_TYPE_FIXED
+//        ),
+//  /* PDO 2 */ (0x00000000U),
+//  /* PDO 3 */ (0x00000000U),
+//  /* PDO 4 */ (0x00000000U),
+//  /* PDO 5 */ (0x00000000U),
+//  /* PDO 6 */ (0x00000000U),
+//  /* PDO 7 */ (0x00000000U)
+//};
+
 USBPD_StatusTypeDef USBPD_PWR_IF_Init(void)
 {
 
