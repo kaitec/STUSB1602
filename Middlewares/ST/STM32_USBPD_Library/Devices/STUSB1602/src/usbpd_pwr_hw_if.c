@@ -116,6 +116,8 @@ HAL_StatusTypeDef HW_IF_PWR_DigitalGPIO_Init()
   return HAL_OK;
 }
 
+uint16_t set_voltage=0;
+uint16_t get_voltage=0;
 
 /**
   * @brief  Set the VBUS voltage level on a specific port.
@@ -127,6 +129,8 @@ USBPD_StatusTypeDef HW_IF_PWR_SetVoltage(uint8_t PortNum, uint16_t voltage)
 {
  USBPD_StatusTypeDef ret = USBPD_OK;
 #if _PPS==USBPD_FALSE
+
+ set_voltage=voltage;
 
   /* PCB Voltage Output
    * +------+------+------+------+------+
@@ -216,7 +220,7 @@ USBPD_StatusTypeDef HW_IF_PWR_SetVoltage(uint8_t PortNum, uint16_t voltage)
   ret=(USBPD_StatusTypeDef)STUSB1602_VBUS_Select_Status_Set(STUSB1602_I2C_Add(PortNum),voltage);
 
 #endif
-  return ret;
+  return USBPD_OK;//ret;
 }
 
 /**
@@ -229,7 +233,8 @@ uint16_t HW_IF_PWR_GetVoltage(uint8_t PortNum)
 #ifdef __VVAR
    return (uint16_t)MVOLT(ADCxConvertedValues[VBUS_INDEX(PortNum)]);
 #else
-  return (uint16_t)(STUSB1602_VBUS_Select_Status_Get(STUSB1602_I2C_Add(PortNum)));
+   get_voltage = (uint16_t)(STUSB1602_VBUS_Select_Status_Get(STUSB1602_I2C_Add(PortNum)));
+   return get_voltage;
 #endif
 }
 
@@ -241,7 +246,6 @@ uint16_t HW_IF_PWR_GetVoltage(uint8_t PortNum)
 uint16_t HW_IF_PWR_GetVoltage_from_reg(uint8_t PortNum)
 {
   return (uint16_t)(STUSB1602_VBUS_Select_Status_Get(STUSB1602_I2C_Add(PortNum)));
-
 }
 
 

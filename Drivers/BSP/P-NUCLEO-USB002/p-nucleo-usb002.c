@@ -108,6 +108,13 @@ USBPD_BSP_GPIOPins_TypeDef USBPD_BSP_LEDs[USBPD_BSP_LEDn] =
 
     } ;
 
+void LED_COLOR(uint8_t r, uint8_t g, uint8_t b)
+{
+	   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, r);
+	   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_11, g);
+	   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, b);
+}
+
 
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/

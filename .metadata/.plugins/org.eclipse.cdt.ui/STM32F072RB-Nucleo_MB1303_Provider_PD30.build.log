@@ -1,20 +1,10 @@
-17:07:13 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
+17:32:39 **** Incremental Build of configuration Debug for project STM32F072RB-Nucleo_MB1303_Provider_PD30 ****
 make all 
-arm-none-eabi-gcc "C:/Users/Andrew/Documents/Repo/STUSB1602/Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/src/usbpd_pwr_hw_if.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F072xB -DUSE_HAL_DRIVER -DUSE_STM32F0XX_NUCLEO -D_RTOS -DUSBPD_LED_SERVER '-DUSBPD_PORT_COUNT=1' -D_SRC -DMB1303 -DUSE_FULL_LL_DRIVER -DUSBPD_STUSB1602 -DCONF_NORMAL -DUSBPDCORE_LIB_PD3_CONFIG_1 -D_TRACE_NA -D_ERROR_RECOVERY -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../../../../../../../../Drivers/STM32F0xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32F0xx-Nucleo -I../../../../../../../../Drivers/BSP/P-NUCLEO-USB002 -I../../../../../../../../Drivers/CMSIS/Include -I../../../../../../../../Drivers/BSP/Components/STUSB1602 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/inc -I../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/inc -I../../../../../../../../Utilities/LED_SERVER -Os -ffunction-sections -Wall -Wno-strict-aliasing -Wno-unused-variable -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/usbpd_pwr_hw_if.d" -MT"Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/usbpd_pwr_hw_if.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/ST/STM32_USBPD_Library/Devices/STUSB1602/usbpd_pwr_hw_if.o"
-arm-none-eabi-gcc -o "STM32F072RB-Nucleo_MB1303_Provider_PD30.elf" @"objects.list"  -l:USBPDCORE_PD3_CONFIG_1_CM0_wc32.a -mcpu=cortex-m0 -T"../STM32F072RBTx_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F072RB-Nucleo_MB1303_Provider_PD30.map" -Wl,--gc-sections -static -L../../../../../../../../Middlewares/ST/STM32_USBPD_Library/Core/lib --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
- 
-arm-none-eabi-objdump -h -S  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  > "STM32F072RB-Nucleo_MB1303_Provider_PD30.list"
-Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.list
- 
-arm-none-eabi-objcopy  -O binary  STM32F072RB-Nucleo_MB1303_Provider_PD30.elf  "STM32F072RB-Nucleo_MB1303_Provider_PD30.bin"
-Finished building: STM32F072RB-Nucleo_MB1303_Provider_PD30.bin
- 
 arm-none-eabi-size   STM32F072RB-Nucleo_MB1303_Provider_PD30.elf 
    text	   data	    bss	    dec	    hex	filename
-  51320	    688	   8776	  60784	   ed70	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
+  51368	    688	   8784	  60840	   eda8	STM32F072RB-Nucleo_MB1303_Provider_PD30.elf
 Finished building: default.size.stdout
  
 
-17:07:15 Build Finished. 0 errors, 0 warnings. (took 1s.733ms)
+17:32:40 Build Finished. 0 errors, 0 warnings. (took 400ms)
 

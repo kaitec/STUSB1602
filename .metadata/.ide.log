@@ -1443,3 +1443,44 @@
 2021-12-26 16:13:37,095 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
 2021-12-26 17:03:15,388 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
 2021-12-26 17:07:15,485 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 17:28:16,434 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 18:03:20,448 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 19:02:00,372 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 19:19:03,262 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 19:21:48,583 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 19:22:13,973 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 19:24:55,839 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 19:40:59,613 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 23:01:16,804 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-26 23:02:22,206 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 00:12:36,407 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 11:14:59,620 [INFO] Activator:178 - 
+
+
+2021-12-27 11:14:59,620 [INFO] Activator:179 - !SESSION log4j initialized
+2021-12-27 11:16:04,899 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 11:36:22,194 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2021-12-27 11:36:22,194 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2021-12-27 12:19:48,978 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 12:56:55,049 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 13:01:31,243 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 13:09:30,261 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 13:10:07,229 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 13:13:27,842 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 13:14:21,127 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 13:29:00,593 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 14:45:25,295 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 14:48:02,897 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 15:12:22,736 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 15:15:12,264 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 15:19:01,512 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 15:27:45,348 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 16:15:44,307 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 16:25:51,343 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 17:03:41,837 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 17:06:21,253 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 17:10:00,780 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 17:10:31,837 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 17:19:10,804 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 17:21:34,119 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
+2021-12-27 17:32:36,461 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 

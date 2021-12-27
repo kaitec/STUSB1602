@@ -68,7 +68,7 @@
 /* Exported typedef ----------------------------------------------------------*/
 /* Exported define -----------------------------------------------------------*/
 #define BSP_PWR_INVALID_VALUE           0xFFFFFFFFu   /* Invalid value set during issue with voltage setting */
-#define BSP_PWR_TIMEOUT_PDO             250u          /* Timeout for PDO to PDO or PDO to APDO at 250ms */
+#define BSP_PWR_TIMEOUT_PDO             500u          /* Timeout for PDO to PDO or PDO to APDO at 250ms */
 
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/

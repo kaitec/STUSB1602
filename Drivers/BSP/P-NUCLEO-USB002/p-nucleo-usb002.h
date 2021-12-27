@@ -174,6 +174,16 @@ typedef struct
 extern UART_HandleTypeDef                     huart_USBPD_BSP;
 #endif /* USBPD_CLI */
 
+#define OFF    1,1,1
+#define RED    0,1,1
+#define GREEN  1,0,1
+#define BLUE   1,1,0
+#define YELW   0,0,1
+#define CYAN   1,0,0
+#define MAG    0,1,0
+
+void LED_COLOR(uint8_t r, uint8_t g, uint8_t b);
+
 /* Exported functions --------------------------------------------------------*/
 /** @addtogroup P-NUCLEO-USB002_Exported_Functions
   * @{
