@@ -301,7 +301,7 @@ extern "C" {
 #define USBPD_PORT_0                     (0U)              /*!< Port 0 identifier */
 #define USBPD_PORT_1                     (1U)              /*!< Port 1 identifier */
 
-#define USBPD_MAX_NB_PDO                 (7U)              /*!< Maximum number of supported Power Data Objects: fix by the Specification */
+#define USBPD_MAX_NB_PDO                 (5U)              /*!< Maximum number of supported Power Data Objects: fix by the Specification */
 #define BIST_CARRIER_MODE_MS             (50U)             /*!< Time in ms of the BIST signal*/
 
 /*

@@ -49,7 +49,7 @@
 #include "stm32f0xx_ll_system.h"
 #include "stm32f0xx_ll_rcc.h"
 #include "stm32f0xx_ll_cortex.h"
-
+#include <string.h>
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 #define _HSE_ENABLE 1
@@ -61,7 +61,7 @@
 static void SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
-
+UART_HandleTypeDef huart2;
 /**
   * @brief  Main program
   * @param  None
@@ -83,12 +83,22 @@ int main(void)
   /* Global Init of USBPD HW */
   USBPD_HW_IF_GlobalHwInit();
 
+  USBPD_BSP_UART_Init();
+  HAL_UART_MspInit(&huart2);
+
+
+  uint8_t str[] = " start \r\n\0";
+  HAL_UART_Transmit(&huart2, str, strlen((char *)str), 50);
+
   /* Initialize the Device Policy Manager */
   if( USBPD_ERROR == USBPD_DPM_Init())
   {
     /* error the RTOS can't be started  */
     while(1);
   }
+
+  //printf(" start \r\n");
+
 }
 
 /**

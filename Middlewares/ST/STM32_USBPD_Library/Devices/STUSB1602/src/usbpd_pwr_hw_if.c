@@ -134,7 +134,7 @@ USBPD_StatusTypeDef HW_IF_PWR_SetVoltage(uint8_t PortNum, uint16_t voltage)
 
   /* PCB Voltage Output
    * +------+------+------+------+------+
-   * | PA11 | PA10 | PA 9 | PA 8 |      |
+   * | PA 8 | PA 9 | PA10 | PA11 |      |
    * | PDO1 | PDO2 | PDO3 | PDO4 | VOUT |
    * +------+------+------+------+------+
    * |  0   |  0   |  0   |  0   |  5V  |
@@ -154,28 +154,28 @@ USBPD_StatusTypeDef HW_IF_PWR_SetVoltage(uint8_t PortNum, uint16_t voltage)
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
        break;
    case 9000:
-	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  1);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
-	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 1);
        break;
    case 12000:
-	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
-	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  1);
-	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
-	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
-       break;
-   case 15000:
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 1);
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
        break;
-   case 20000:
+   case 15000:
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  1);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
+       break;
+   case 20000:
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  1);
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, 0);
-	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 1);
+	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
        break;
    default:
 	   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
