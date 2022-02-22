@@ -87,8 +87,8 @@ int main(void)
   HAL_UART_MspInit(&huart2);
 
 
-  uint8_t str[] = " start \r\n\0";
-  HAL_UART_Transmit(&huart2, str, strlen((char *)str), 50);
+//  uint8_t str[] = " start \r\n\0";
+//  HAL_UART_Transmit(&huart2, str, strlen((char *)str), 50);
 
   /* Initialize the Device Policy Manager */
   if( USBPD_ERROR == USBPD_DPM_Init())

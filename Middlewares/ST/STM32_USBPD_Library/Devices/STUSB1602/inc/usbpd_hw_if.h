@@ -91,7 +91,7 @@ typedef enum
 /** @defgroup USBPD_DEVICE_HW_IF_Exported_Defines USBPD DEVICE HW_IF Exported Defines
 * @{
 */
-#define STM32_D_N_Pin                   GPIO_PIN_11  /*!< USB D- Pin       */
+#define STM32_D_N_Pin                   GPIO_PIN_15  /*!< USB D- Pin       */ //GPIO_PIN_11
 #define STM32_D_N_GPIO_Port             GPIOA        /*!< USB D- Port      */
 #define STM32_D_P_Pin                   GPIO_PIN_12  /*!< USB D+ Pin       */
 #define STM32_D_P_GPIO_Port             GPIOA        /*!< USB D+ Port      */

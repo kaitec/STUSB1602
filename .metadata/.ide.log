@@ -1545,3 +1545,4 @@
 2022-02-19 11:50:17,767 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
 2022-02-19 12:09:48,323 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
 2022-02-19 12:09:48,323 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2022-02-19 14:27:45,886 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 08004f4a t 
